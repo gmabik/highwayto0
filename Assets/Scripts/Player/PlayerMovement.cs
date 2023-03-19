@@ -1,6 +1,7 @@
 using Newtonsoft.Json.Bson;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
@@ -120,9 +121,28 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyUp(crouchKey))
         {
-            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+            TryStandUp();
         }
     }
+
+    private bool standUpInvokeStarted;
+    private void TryStandUp()
+    {
+        bool cantStandUp = Physics.Raycast(transform.position, Vector3.up, playerHeight * 0.5f + 10f, whatIsGround);
+        Debug.DrawRay(transform.position, Vector3.up, Color.red);
+        if (!cantStandUp)
+        {
+            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+            CancelInvoke(nameof(TryStandUp));
+            standUpInvokeStarted = false;
+        }
+        else if (!standUpInvokeStarted)
+        {
+            InvokeRepeating(nameof(TryStandUp), 0.1f, 0.1f);
+            standUpInvokeStarted = true;
+        }
+    }
+
     private void StateHandler()
     {
         if(Input.GetKey(crouchKey))

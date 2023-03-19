@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 151796039}
   - component: {fileID: 151796038}
   - component: {fileID: 151796037}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 200137969}
   - component: {fileID: 200137968}
   - component: {fileID: 200137967}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +445,7 @@ Transform:
   m_GameObject: {fileID: 269421327}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 4.48, z: 0}
-  m_LocalScale: {x: 6.579, y: 3.8954983, z: 4.3502}
+  m_LocalScale: {x: 5, y: 4, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 863773019}
@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 429573709}
   - component: {fileID: 429573708}
   - component: {fileID: 429573707}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 469064390}
   - component: {fileID: 469064389}
   - component: {fileID: 469064388}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,14 +701,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469064387}
-  m_LocalRotation: {x: 0.22938089, y: -0, z: -0, w: 0.9733368}
-  m_LocalPosition: {x: -54.3, y: 10, z: -16.2}
+  m_LocalRotation: {x: 0.24481794, y: -0.026833674, z: 0.0049793143, w: 0.96918494}
+  m_LocalPosition: {x: -55.6, y: 9.9, z: -18}
   m_LocalScale: {x: 17.446077, y: 1, z: 56.29063}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 26.521, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 28.347, y: -3.229, z: -0.227}
 --- !u!1 &800812799
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,11 +790,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 10
   sprintSpeed: 20
-  groundDrag: 5
+  groundDrag: 4
   jumpForce: 20
   jumpCooldown: 0.25
   airMultiplayer: 0.4
-  crouchSpeed: 3.5
+  crouchSpeed: 0.5
   crouchYScale: 0.5
   wallrunSpeed: 0
   desiredMovespeed: 0
@@ -805,6 +805,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  maxSlopeAngle: 60
   orientation: {fileID: 1965669439}
   state: 0
   wallrunning: 0
@@ -1074,7 +1075,7 @@ GameObject:
   - component: {fileID: 1802630283}
   - component: {fileID: 1802630282}
   - component: {fileID: 1802630281}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

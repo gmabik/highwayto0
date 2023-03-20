@@ -16,17 +16,21 @@ public class MeleeWeapon : MonoBehaviour
         SetAnimParams();
     }
 
-    private bool isWalking()
-    => gameObject.transform.parent.GetComponent<PlayerMovement>().state == PlayerMovement.MovementState.sprinting;
-
     private void SetAnimParams()
     {
-        if(Input.GetMouseButton(0)) animator.SetBool("attacking", true);
+        if (Input.GetMouseButton(0)) animator.SetBool("attacking", true);
         animator.SetBool("walking", isWalking());
     }
+
+    private bool isWalking()
+        => gameObject.transform.parent.GetComponent<PlayerMovement>().state == PlayerMovement.MovementState.sprinting;
 
     public void StopAttacking()
     {
         animator.SetBool("attacking", false);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
     }
 }

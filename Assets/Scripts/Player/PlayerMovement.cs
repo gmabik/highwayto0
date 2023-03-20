@@ -75,6 +75,9 @@ public class PlayerMovement : MonoBehaviour
         readyToJump = true;
 
         startYScale = transform.localScale.y;
+
+        state = MovementState.walking;
+        moveSpeed = walkSpeed;
     }
 
 
@@ -84,18 +87,21 @@ public class PlayerMovement : MonoBehaviour
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.5f, whatIsGround);
         MyInput();
         SpeedControl();
-        StateHandler();
 
-
-        if (grounded)
+        if(grounded && state == MovementState.air)
+        {
+            state = MovementState.walking;
+            moveSpeed = walkSpeed;
+        }
+        else if (grounded)
         {
             rb.drag = groundDrag;
-            Debug.Log("chuj");
         }
-
-
         else
+        {
             rb.drag = 0;
+            state = MovementState.air;
+        }
     }
     private void FixedUpdate()
     {
@@ -106,7 +112,18 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if(Input.GetKey(jumpKey) && readyToJump && grounded)
+        if (Input.GetKeyDown(sprintKey))
+        {
+            state = MovementState.sprinting;
+            moveSpeed = sprintSpeed;
+        }
+
+        if (Input.GetKeyUp(sprintKey) && state == MovementState.sprinting)
+        {
+            state = MovementState.walking;
+            moveSpeed = walkSpeed;
+        }
+        if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
 
@@ -114,10 +131,14 @@ public class PlayerMovement : MonoBehaviour
 
             Invoke(nameof(ResetJump), jumpCooldown);
         }
-        if(Input.GetKeyDown(crouchKey))
+
+        if (Input.GetKeyDown(crouchKey))
         {
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
             rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+
+            state = MovementState.crouching;
+            moveSpeed = crouchSpeed;
         }
         if (Input.GetKeyUp(crouchKey))
         {
@@ -129,12 +150,14 @@ public class PlayerMovement : MonoBehaviour
     private void TryStandUp()
     {
         bool cantStandUp = Physics.Raycast(transform.position, Vector3.up, playerHeight * 0.5f + 10f, whatIsGround);
-        Debug.DrawRay(transform.position, Vector3.up, Color.red);
         if (!cantStandUp)
         {
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
             CancelInvoke(nameof(TryStandUp));
             standUpInvokeStarted = false;
+
+            state = MovementState.walking;
+            moveSpeed = walkSpeed;
         }
         else if (!standUpInvokeStarted)
         {
@@ -142,57 +165,33 @@ public class PlayerMovement : MonoBehaviour
             standUpInvokeStarted = true;
         }
     }
-
-    private void StateHandler()
-    {
-        if(Input.GetKey(crouchKey))
-        {
-            state = MovementState.crouching;
-            moveSpeed = crouchSpeed;
-        }
-        
-        if(grounded && Input.GetKey(sprintKey))
-        {
-            state = MovementState.sprinting;
-            moveSpeed = sprintSpeed;
-        }
-        else if(grounded)
-        {
-            state = MovementState.walking;
-            moveSpeed = walkSpeed;
-        }
-        else
-        {
-            state = MovementState.air;
-        }
-    }
-    private void MovePlayer() 
+    private void MovePlayer()
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        if(OnSlope() && !exitingSlope)
+        if (OnSlope() && !exitingSlope)
         {
-            
+
             rb.AddForce(GetSlopeMoveDirection() * moveSpeed * 20f, ForceMode.Force);
-                rb.AddForce(Vector3.down * 80f, ForceMode.Force);
+            rb.AddForce(Vector3.down * 80f, ForceMode.Force);
         }
-       else if(grounded)
+        else if (grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-       else if(!grounded)
+        else if (!grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplayer, ForceMode.Force);
 
     }
     private void SpeedControl()
     {
         //slope speed limit
-        if(OnSlope() && !exitingSlope)
+        if (OnSlope() && !exitingSlope)
         {
-             if(rb.velocity.magnitude > moveSpeed)
+            if (rb.velocity.magnitude > moveSpeed)
                 rb.velocity = rb.velocity.normalized * moveSpeed;
         }
 
         else
-        { 
-        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        {
+            Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
             if (flatVel.magnitude > moveSpeed)
             {
@@ -216,11 +215,10 @@ public class PlayerMovement : MonoBehaviour
 
     private bool OnSlope()
     {
-        Debug.DrawRay(transform.position,Vector3.down, Color.yellow);
-        if(Physics.Raycast(transform.position, Vector3.down, out slopeHit))
+        if (Physics.Raycast(transform.position, Vector3.down, out slopeHit))
         {
-        float angle = Vector3.Angle(Vector3.up,slopeHit.normal);
-        return angle < maxSlopeAngle && angle != 0;
+            float angle = Vector3.Angle(Vector3.up, slopeHit.normal);
+            return angle < maxSlopeAngle && angle != 0;
         }
 
         return false;
@@ -229,4 +227,4 @@ public class PlayerMovement : MonoBehaviour
     {
         return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
     }
-}  
+}

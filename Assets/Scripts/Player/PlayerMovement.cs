@@ -76,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
 
         startYScale = transform.localScale.y;
 
+        rb.drag = groundDrag;
         state = MovementState.walking;
         moveSpeed = walkSpeed;
     }
@@ -90,14 +91,21 @@ public class PlayerMovement : MonoBehaviour
 
         if(grounded && state == MovementState.air)
         {
+            rb.drag = groundDrag;
+            /*if (Input.GetKey(crouchKey))
+            {
+                state = MovementState.crouching;
+                moveSpeed = crouchSpeed;
+            }
+            else if (Input.GetKey(sprintKey))
+            {
+                state = MovementState.sprinting;
+                moveSpeed = sprintSpeed;
+            }*/
             state = MovementState.walking;
             moveSpeed = walkSpeed;
         }
-        else if (grounded)
-        {
-            rb.drag = groundDrag;
-        }
-        else
+        else if(!grounded)
         {
             rb.drag = 0;
             state = MovementState.air;
@@ -112,17 +120,18 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKeyDown(sprintKey))
+        if (Input.GetKey(sprintKey))
         {
             state = MovementState.sprinting;
             moveSpeed = sprintSpeed;
         }
-
         if (Input.GetKeyUp(sprintKey) && state == MovementState.sprinting)
         {
             state = MovementState.walking;
             moveSpeed = walkSpeed;
         }
+
+
         if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
@@ -132,11 +141,14 @@ public class PlayerMovement : MonoBehaviour
             Invoke(nameof(ResetJump), jumpCooldown);
         }
 
+
         if (Input.GetKeyDown(crouchKey))
         {
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
             rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
-
+        }
+        if(Input.GetKey(crouchKey))
+        {
             state = MovementState.crouching;
             moveSpeed = crouchSpeed;
         }

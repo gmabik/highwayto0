@@ -764,7 +764,7 @@ MonoBehaviour:
   jumpForce: 20
   jumpCooldown: 0.25
   airMultiplayer: 0.4
-  crouchSpeed: 0.5
+  crouchSpeed: 5
   crouchYScale: 0.5
   wallrunSpeed: 0
   desiredMovespeed: 0

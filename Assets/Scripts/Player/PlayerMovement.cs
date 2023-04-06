@@ -115,21 +115,31 @@ public class PlayerMovement : MonoBehaviour
     {
         MovePlayer();
     }
+
+    private bool CheckIfSprintKeyDown() => Input.GetKey(sprintKey);
+    private bool CheckIfSprintingAndKeyReleased() => Input.GetKeyUp(sprintKey) && state == MovementState.sprinting;
+
+    private void HandleSprint()
+    {
+        if (CheckIfSprintKeyDown())
+        {
+            state = MovementState.sprinting;
+            moveSpeed = sprintSpeed;
+        }
+
+        if (CheckIfSprintingAndKeyReleased())
+        {
+            state = MovementState.walking;
+            moveSpeed = walkSpeed;
+        }
+    }
+
     private void MyInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKey(sprintKey))
-        {
-            state = MovementState.sprinting;
-            moveSpeed = sprintSpeed;
-        }
-        if (Input.GetKeyUp(sprintKey) && state == MovementState.sprinting)
-        {
-            state = MovementState.walking;
-            moveSpeed = walkSpeed;
-        }
+        HandleSprint();
 
 
         if (Input.GetKey(jumpKey) && readyToJump && grounded)
@@ -147,11 +157,13 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
             rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
         }
+
         if(Input.GetKey(crouchKey))
         {
             state = MovementState.crouching;
             moveSpeed = crouchSpeed;
         }
+
         if (Input.GetKeyUp(crouchKey))
         {
             TryStandUp();

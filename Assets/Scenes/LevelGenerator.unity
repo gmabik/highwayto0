@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -282,12 +282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b645e47da7d732e45a90186be085f4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 10
-  sprintSpeed: 20
-  groundDrag: 4
+  moveSpeed: 0
+  walkSpeed: 20
+  groundDrag: 0.4
   jumpForce: 20
   jumpCooldown: 0.25
-  airMultiplayer: 0.4
+  airMultiplayer: 0.2
   crouchSpeed: 15
   crouchYScale: 0.5
   wallrunSpeed: 0
@@ -311,7 +311,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919363391}
   serializedVersion: 2
-  m_Mass: 0.8
+  m_Mass: 0.7
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -602,6 +602,9 @@ MonoBehaviour:
   - {fileID: 7552546097672754954, guid: 320a1db49df07ca44b18f1efba350b52, type: 3}
   - {fileID: 4746995880636163974, guid: fdd746466ddb5be4cad159071eb9dafa, type: 3}
   - {fileID: 4604387444063754510, guid: 186d1f642fc0b8f46af3d8515816b596, type: 3}
+  - {fileID: 3569013383847455919, guid: ffa8cedbfb8e71f4395208969121679c, type: 3}
+  - {fileID: 3569013383847455919, guid: 1f570893dc2f290459ca9938d0add39a, type: 3}
+  - {fileID: 3569013383847455919, guid: 83f74a1bef59dac49b3c122a1cb3c56a, type: 3}
   spawnedSections: []
   StartSection: {fileID: 1337646788}
   zPos: 40
@@ -674,8 +677,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03af01c9be61ad941a49a5a6aecaf512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 1000
-  sensY: 1000
+  sensX: 3000
+  sensY: 3000
   orientation: {fileID: 65609186}
 --- !u!20 &1666575338
 Camera:

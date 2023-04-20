@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     private float moveSpeed;
     public float walkSpeed;
-    public float sprintSpeed;
 
     public float groundDrag;
 
@@ -116,30 +115,10 @@ public class PlayerMovement : MonoBehaviour
         MovePlayer();
     }
 
-    private bool CheckIfSprintKeyDown() => Input.GetKey(sprintKey);
-    private bool CheckIfSprintingAndKeyReleased() => Input.GetKeyUp(sprintKey) && state == MovementState.sprinting;
-
-    private void HandleSprint()
-    {
-        if (CheckIfSprintKeyDown())
-        {
-            state = MovementState.sprinting;
-            moveSpeed = sprintSpeed;
-        }
-
-        if (CheckIfSprintingAndKeyReleased())
-        {
-            state = MovementState.walking;
-            moveSpeed = walkSpeed;
-        }
-    }
-
     private void MyInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
-
-        HandleSprint();
 
 
         if (Input.GetKey(jumpKey) && readyToJump && grounded)

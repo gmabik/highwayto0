@@ -23,7 +23,7 @@ public class MeleeWeapon : MonoBehaviour
     }
 
     private bool isWalking()
-        => gameObject.transform.parent.GetComponent<PlayerMovement>().state == PlayerMovement.MovementState.sprinting;
+        => transform.parent.GetComponent<PlayerMovement>().state == PlayerMovement.MovementState.sprinting;
 
     public void StopAttacking()
     {

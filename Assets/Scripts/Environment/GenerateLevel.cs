@@ -1,28 +1,41 @@
+using Newtonsoft.Json.Bson;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GenerateLevel : MonoBehaviour
 {
-    public GameObject[] section;
-    public int zPos = 40;
-    public bool creatingSection = false;
-    public int secNum;
-
-    void Update()
+    public static GenerateLevel Instance { get; private set; }
+    private void Awake()
     {
-        if (creatingSection == false)
+        if (Instance != null && Instance != this)
         {
-            creatingSection = true;
-            StartCoroutine(GenerateSection());
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
         }
     }
-    IEnumerator GenerateSection()
+
+    public GameObject[] sections;
+    [SerializeField] private GameObject[] spawnedSections;
+    [SerializeField] private GameObject StartSection;
+    [SerializeField] private int zPos = 40;
+
+    private void Start()
     {
-        secNum = Random.Range(0, 3);
-        Instantiate(section[secNum], new Vector3(0, 0, zPos), Quaternion.identity);
+        spawnedSections = new GameObject[3];
+        spawnedSections[2] = StartSection;
+    }
+
+    public void GenerateSection()
+    {
+        GameObject newSection = Instantiate(sections[Random.Range(0, sections.Length)], new Vector3(0, 0, zPos), Quaternion.identity);
         zPos += 40;
-        yield return new WaitForSeconds(2);
-        creatingSection = false; 
+        try { Destroy(spawnedSections[0]); }
+        catch { }
+        Functions.RelocateObjectsInArray<GameObject>(spawnedSections, newSection);
     }
 }

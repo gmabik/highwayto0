@@ -12,7 +12,7 @@ public class EnemyFollow : MonoBehaviour
 
     public GameObject enemyBullet;
     public Transform spawnPoint;
-    public float enemySpeed;
+    public float bulletSpeed;
 
     // Update is called once per frame
     void Update()
@@ -28,9 +28,9 @@ public class EnemyFollow : MonoBehaviour
         if (bulletTime > 0) return;
         bulletTime = timer;
 
-        GameObject bulletObj = Instantiate(enemyBullet, spawnPoint.transform.position, spawnPoint.transform.rotation) as GameObject;
+        GameObject bulletObj = Instantiate(enemyBullet, spawnPoint.transform.position, spawnPoint.transform.rotation);
         Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
-        bulletRig.AddForce(bulletRig.transform.forward * enemySpeed);
+        bulletRig.AddForce(bulletRig.transform.forward * bulletSpeed);
         Destroy(bulletObj, 5f);
     } 
 }

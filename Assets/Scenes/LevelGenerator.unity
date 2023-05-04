@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< Updated upstream
   m_IndirectSpecularColor: {r: 0.17508821, g: 0.08376196, b: 0.08320312, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.17508823, g: 0.08376233, b: 0.08320326, a: 1}
+>>>>>>> Stashed changes
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -288,7 +292,7 @@ MonoBehaviour:
   jumpForce: 20
   jumpCooldown: 0.25
   airMultiplayer: 0.2
-  crouchSpeed: 15
+  crouchSpeed: 20
   crouchYScale: 0.5
   wallrunSpeed: 0
   desiredMovespeed: 0

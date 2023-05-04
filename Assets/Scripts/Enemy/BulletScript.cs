@@ -8,7 +8,7 @@ public class BulletScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(gameObject, 5f);
+            Destroy(gameObject);
         }
     }
 }

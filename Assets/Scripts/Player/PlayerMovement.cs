@@ -10,6 +10,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Camera mainCam;
+
     [Header("Movement")]
     public float moveSpeed;
     public float walkSpeed;
@@ -18,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jumping")]
     public float jumpForce;
-    public float jumpCooldown;
+    public float jumpCD;
     public float airMultiplayer;
     bool readyToJump;
 
@@ -31,10 +33,19 @@ public class PlayerMovement : MonoBehaviour
     public float wallrunSpeed;
     public float desiredMovespeed;
 
+    [Header("Dashing")]
+    public float DashCD;
+    public bool isDashOnCD;
+    public float DashMultiplier;
+
+    [Header("Invincibility")]
+    public float timeOfInvincible;
+    public bool isInvincible;
+
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
-    public KeyCode sprintKey = KeyCode.LeftShift;
     public KeyCode crouchKey = KeyCode.LeftControl;
+    public KeyCode dashKey = KeyCode.LeftShift;
 
     [Header("Ground Check")]
     public float playerHeight;
@@ -78,6 +89,8 @@ public class PlayerMovement : MonoBehaviour
         rb.drag = groundDrag;
         state = MovementState.walking;
         moveSpeed = walkSpeed;
+
+        isDashOnCD = false;
     }
 
 
@@ -120,24 +133,29 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-
         if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
 
             Jump();
 
-            Invoke(nameof(ResetJump), jumpCooldown);
+            Invoke(nameof(ResetJump), jumpCD);
         }
 
+        DashManagement();
 
+        CrouchManagement();
+    }
+
+    private void CrouchManagement()
+    {
         if (Input.GetKeyDown(crouchKey))
         {
             transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y / 2, transform.localScale.z);
             rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
         }
 
-        if(Input.GetKey(crouchKey))
+        if (Input.GetKey(crouchKey))
         {
             state = MovementState.crouching;
             moveSpeed = crouchSpeed;
@@ -147,6 +165,29 @@ public class PlayerMovement : MonoBehaviour
         {
             TryStandUp();
         }
+    }
+
+    private void DashManagement()
+    {
+        if (Input.GetKeyDown(dashKey) && !isDashOnCD) StartCoroutine(Dash());
+    }
+
+    private IEnumerator Dash()
+    {
+        Vector3 direction = new Vector3(mainCam.transform.rotation.x, transform.rotation.y, 1);
+        rb.velocity = new Vector3(0, 0f, 0);
+        rb.AddForce(mainCam.transform.forward * DashMultiplier, ForceMode.Impulse);
+        isDashOnCD = true;
+        StartCoroutine(InvincibilityFrames());
+        yield return new WaitForSeconds(DashCD);
+        isDashOnCD = false;
+    }
+
+    private IEnumerator InvincibilityFrames()
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(timeOfInvincible);
+        isInvincible = false;
     }
 
     private bool standUpInvokeStarted;
@@ -234,5 +275,10 @@ public class PlayerMovement : MonoBehaviour
     public void UpdateMoveSpeed()
     {
         if (state == MovementState.walking) moveSpeed = walkSpeed;
+    }
+
+    public void Die()
+    {
+        if (!isInvincible) Destroy(gameObject);
     }
 }

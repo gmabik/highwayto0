@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class ForceObstacle : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    Rigidbody rb;
+    [SerializeField] private float risingMultiplier;
+
+    private void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag != "Player") return;
+        rb.AddForce(transform.up * risingMultiplier);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionExit(Collision collision)
     {
-        
+        if (collision.gameObject.tag != "Player") return;
+        rb.AddForce(-transform.up * risingMultiplier);
     }
 }

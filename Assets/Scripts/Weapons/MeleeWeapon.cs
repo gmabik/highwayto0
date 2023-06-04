@@ -30,7 +30,9 @@ public class MeleeWeapon : MonoBehaviour
         animator.SetBool("attacking", false);
     }
 
+    public float killCount;
     private void OnCollisionEnter(Collision collision)
     {
+        
     }
 }

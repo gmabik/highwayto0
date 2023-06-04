@@ -449,6 +449,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5406f9defadcd414a8dfdf655f2a8873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0
+  startSpeed: 5
+  speedCoef: 15
+  currentSpeed: 0
 --- !u!114 &1088405758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,7 +730,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sections:
+  - {fileID: 791730946677320467, guid: 5bcbc381e40625d48b002aa21b572bde, type: 3}
+  - {fileID: 7552546097672754954, guid: 320a1db49df07ca44b18f1efba350b52, type: 3}
+  - {fileID: 4746995880636163974, guid: fdd746466ddb5be4cad159071eb9dafa, type: 3}
+  - {fileID: 4604387444063754510, guid: 186d1f642fc0b8f46af3d8515816b596, type: 3}
+  - {fileID: 3569013383847455919, guid: ffa8cedbfb8e71f4395208969121679c, type: 3}
+  - {fileID: 3569013383847455919, guid: 1f570893dc2f290459ca9938d0add39a, type: 3}
+  - {fileID: 3569013383847455919, guid: 83f74a1bef59dac49b3c122a1cb3c56a, type: 3}
+  - {fileID: 3569013383847455919, guid: 37405080da491894d8b9f8e6612e0213, type: 3}
+  - {fileID: 3569013383847455919, guid: fea6d8ccbf3fedb419ea567f0db19ec4, type: 3}
   - {fileID: 3569013383847455919, guid: b84416055f43cd746a655d8d6ce32267, type: 3}
+  - {fileID: 3569013383847455919, guid: bcc7ea691c9a94b48b0f5472eea1bf05, type: 3}
+  - {fileID: 3569013383847455919, guid: 0d030d1918424104eb3b7d8fd6351d68, type: 3}
+  - {fileID: 3569013383847455919, guid: 0d11f5d89228ab1439760c972d126b3d, type: 3}
+  - {fileID: 3569013383847455919, guid: 19ea67be1529f8e4ab2cd7e87771bcc6, type: 3}
+  - {fileID: 791730946677320467, guid: 39ab80bc20698cc4a874cb494a8bb10e, type: 3}
+  - {fileID: 3569013383847455919, guid: d8e0a17e47c26cc47a56084075fd9ecd, type: 3}
+  - {fileID: 3569013383847455919, guid: abb00f22a5b0e324db87004a303a609a, type: 3}
+  - {fileID: 3569013383847455919, guid: 3e2d374817bf9cd41a31b713e9cb8feb, type: 3}
+  - {fileID: 3569013383847455919, guid: a56bc35f15a26c44eb2b49586e65b3fe, type: 3}
+  - {fileID: 3569013383847455919, guid: 788593ec7fb0f654891e290579b1b509, type: 3}
+  - {fileID: 3569013383847455919, guid: bde9ed8c969695841a34e4080d420aef, type: 3}
   spawnedSections: []
   StartSection: {fileID: 1337646788}
   zPos: 40

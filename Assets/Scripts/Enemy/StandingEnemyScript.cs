@@ -24,10 +24,11 @@ public class StandingEnemyScript : MonoBehaviour
         bulletTime -= Time.deltaTime;
         if (target == null) return;
 
-        /*_direction = (target.position - transform.position).normalized;
+        _direction = (target.position - transform.position).normalized;
         _lookRotation = Quaternion.LookRotation(_direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);*/
-        transform.LookAt(target);
+        _lookRotation.x = 0f;
+        _lookRotation.z = 0f;
+        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
         Shoot();
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using DG.Tweening;
 
 public class MeleeWeapon : MonoBehaviour
 {
@@ -31,8 +32,13 @@ public class MeleeWeapon : MonoBehaviour
     }
 
     public float killCount;
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        
+        GameObject collided = collision.gameObject;
+        if (collided.tag != "enemy") return;
+        collided.GetComponent<StandingEnemyScript>().enabled = false;
+        collided.transform.DOMoveY(-3f, 0.5f).SetRelative(true);
+        collided.transform.DORotate(new Vector3(-90f, 0f, 0f), 0.5f);
+        Destroy(collided/*, 5f*/);
     }
 }

@@ -35,7 +35,7 @@ public class MeleeWeapon : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         GameObject collided = collision.gameObject;
-        if (collided.tag != "enemy") return;
+        if (!collided.GetComponent<StandingEnemyScript>()) return;
         collided.GetComponent<StandingEnemyScript>().enabled = false;
         collided.transform.DOMoveY(-0.3f, 0.5f).SetRelative(true);
         collided.transform.DORotate(new Vector3(-90f, 0f, 0f), 0.5f);

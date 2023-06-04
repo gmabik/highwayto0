@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 5027028865762837115}
   m_Layer: 0
   m_Name: enemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -642,11 +642,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  timer: 2
+  timer: 3
   enemyBullet: {fileID: 7263604281860619690, guid: 50b4b965fba903f4c9c56094d4ce3fed, type: 3}
   spawnPoint: {fileID: 2322913525720588411}
-  bulletForce: 6000
-  RotationSpeed: 60
+  bulletForce: 3500
+  RotationSpeed: 5
 --- !u!65 &6102034964631506149
 BoxCollider:
   m_ObjectHideFlags: 0

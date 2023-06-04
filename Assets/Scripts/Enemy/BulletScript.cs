@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other)
+    private void Start()
+    {
+        Destroy(gameObject, 5f);
+    }
+
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(gameObject, 5f);
+            other.gameObject.GetComponent<PlayerMovement>().Die();
         }
     }
 }

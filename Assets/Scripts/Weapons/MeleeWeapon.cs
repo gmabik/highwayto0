@@ -37,8 +37,9 @@ public class MeleeWeapon : MonoBehaviour
         GameObject collided = collision.gameObject;
         if (collided.tag != "enemy") return;
         collided.GetComponent<StandingEnemyScript>().enabled = false;
-        collided.transform.DOMoveY(-3f, 0.5f).SetRelative(true);
+        collided.transform.DOMoveY(-0.3f, 0.5f).SetRelative(true);
         collided.transform.DORotate(new Vector3(-90f, 0f, 0f), 0.5f);
-        Destroy(collided/*, 5f*/);
+        Destroy(collided, 5f);
+        killCount++;
     }
 }

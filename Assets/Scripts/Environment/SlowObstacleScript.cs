@@ -24,6 +24,7 @@ public class SlowObstacleScript : MonoBehaviour
     float time = 0f;
     private void Update()
     {
+        if (playerMovement == null) return;
         if (canCount) time += Time.deltaTime;
         if(time > 2f)
         {

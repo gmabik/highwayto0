@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEditorInternal;
 using UnityEngine;
+using FMODUnity;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -65,6 +66,8 @@ public class PlayerMovement : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
+
+    [SerializeField] private EventReference JumpSound;
 
     public MovementState state;
     public enum MovementState
@@ -140,6 +143,8 @@ public class PlayerMovement : MonoBehaviour
             Jump();
 
             Invoke(nameof(ResetJump), jumpCD);
+            AudioManager.instance.PlayOneShot(JumpSound, this.transform.position);
+
         }
 
         DashManagement();

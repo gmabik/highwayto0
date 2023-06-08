@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using static UnityEngine.GraphicsBuffer;
+using FMODUnity;
 
 public class StandingEnemyScript : MonoBehaviour
 {
+
+    [SerializeField] private EventReference EnemyShoot;
+
     public Transform target;
 
     [SerializeField] private float timer = 5;
@@ -41,5 +45,7 @@ public class StandingEnemyScript : MonoBehaviour
         Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
         bulletRig.AddForce(bulletRig.transform.forward * bulletForce);
         Destroy(bulletObj, 5f);
+        AudioManager.instance.PlayOneShot(EnemyShoot, this.transform.position);
+
     }
 }

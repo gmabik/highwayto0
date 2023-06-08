@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using DG.Tweening;
+using FMODUnity;
 
 public class MeleeWeapon : MonoBehaviour
 {
     private Animator animator;
+    [SerializeField] private EventReference BatHit;
     private void Start()
     {
         animator = gameObject.GetComponent<Animator>();
@@ -21,6 +23,8 @@ public class MeleeWeapon : MonoBehaviour
     {
         if (Input.GetMouseButton(0)) animator.SetBool("attacking", true);
         animator.SetBool("walking", isWalking());
+        AudioManager.instance.PlayOneShot(BatHit, this.transform.position);
+
     }
 
     private bool isWalking()

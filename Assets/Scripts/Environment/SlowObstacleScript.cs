@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class SlowObstacleScript : MonoBehaviour
 {
     PlayerMovement playerMovement;
+    [SerializeField] private EventReference ObstacleHit;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.TryGetComponent<PlayerMovement>(out playerMovement))
@@ -13,6 +15,7 @@ public class SlowObstacleScript : MonoBehaviour
             playerMovement.crouchSpeed /= 2;
             playerMovement.moveSpeed /= 2;
         }
+        AudioManager.instance.PlayOneShot(ObstacleHit, this.transform.position);
     }
 
     private void OnCollisionExit(Collision collision)

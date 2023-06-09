@@ -6,7 +6,7 @@ public class LevelTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        //if (other.gameObject.tag != "Player") return;
+        if (other.gameObject.tag != "Player") return;
         GenerateLevel.Instance.GenerateSection();
         Destroy(gameObject);
     }

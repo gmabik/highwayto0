@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using DG.Tweening;
+using FMODUnity;
 
 public class MeleeWeapon : MonoBehaviour
 {
     private Animator animator;
+    [SerializeField] private EventReference BatHit;
+    [SerializeField] private EventReference EnemyDeath;
+
     private void Start()
     {
         animator = gameObject.GetComponent<Animator>();
@@ -20,6 +25,8 @@ public class MeleeWeapon : MonoBehaviour
     {
         if (Input.GetMouseButton(0)) animator.SetBool("attacking", true);
         animator.SetBool("walking", isWalking());
+        AudioManager.instance.PlayOneShot(BatHit, this.transform.position);
+
     }
 
     private bool isWalking()
@@ -30,7 +37,17 @@ public class MeleeWeapon : MonoBehaviour
         animator.SetBool("attacking", false);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public float killCount;
+    private void OnTriggerEnter(Collider collision)
     {
+        GameObject collided = collision.gameObject;
+        if (!collided.GetComponent<StandingEnemyScript>()) return;
+        collided.GetComponent<StandingEnemyScript>().enabled = false;
+        collided.transform.DOMoveY(-0.3f, 0.5f).SetRelative(true);
+        collided.transform.DORotate(new Vector3(-90f, 0f, 0f), 0.5f);
+        Destroy(collided, 5f);
+        killCount++;
+        AudioManager.instance.PlayOneShot(EnemyDeath, this.transform.position);
+
     }
 }

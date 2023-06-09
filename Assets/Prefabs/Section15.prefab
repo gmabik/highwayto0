@@ -110,6 +110,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &791730945466029468
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +227,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &791730945479134327
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +344,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &791730945565349719
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +558,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &791730946396511382
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,7 +593,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791730946396511382}
   m_LocalRotation: {x: -0.0019448098, y: 0.7083438, z: 0.0013581648, w: 0.70586365}
-  m_LocalPosition: {x: 0, y: 5.1, z: -7.7}
+
+  m_LocalPosition: {x: -0.01, y: 6.35, z: -7.7}
+=======
+
   m_LocalScale: {x: 1, y: 5.6927, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -647,6 +678,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &791730946541614821
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,6 +795,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &791730946564020485
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,6 +912,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &791730946677320467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1140,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &1875405052741474822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,6 +1448,10 @@ PrefabInstance:
     - target: {fileID: 1665427218008344194, guid: 786214b195fe4e449ae052792a91b42f, type: 3}
       propertyPath: m_Name
       value: Speed breaker 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1665427218008344194, guid: 786214b195fe4e449ae052792a91b42f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2042129095488691256, guid: 786214b195fe4e449ae052792a91b42f, type: 3}
       propertyPath: m_RootOrder

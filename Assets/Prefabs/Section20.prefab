@@ -110,6 +110,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &964089181205655803
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +227,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &1832041713414539228
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +344,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &1839614888531849224
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +461,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &2409855235585679930
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +578,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &3569013383698221692
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,6 +1014,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &4086225962575844844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1131,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &4808561829818703333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,6 +1345,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &6174386748737732790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +1462,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &6637872851667620278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,6 +1579,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &7017713573805872225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,6 +1890,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &8017258809085462923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,6 +2007,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &8769131804062769735
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,6 +2124,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1001 &62971491456153463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2112,6 +2203,10 @@ PrefabInstance:
     - target: {fileID: 8592192679175653359, guid: 30e9535288fe2b74c9780bc60eed5731, type: 3}
       propertyPath: m_Name
       value: Long barrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 8592192679175653359, guid: 30e9535288fe2b74c9780bc60eed5731, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8968436090302782805, guid: 30e9535288fe2b74c9780bc60eed5731, type: 3}
       propertyPath: m_RootOrder
@@ -2657,6 +2752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red barrier (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6044287839736442154, guid: 12b91b6bf98b3184b8f13a573b7e1bb2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6389006332644849552, guid: 12b91b6bf98b3184b8f13a573b7e1bb2, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -2781,6 +2880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red barrier
       objectReference: {fileID: 0}
+    - target: {fileID: 6044287839736442154, guid: 12b91b6bf98b3184b8f13a573b7e1bb2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6389006332644849552, guid: 12b91b6bf98b3184b8f13a573b7e1bb2, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -2842,6 +2945,10 @@ PrefabInstance:
     - target: {fileID: 7432150757856193460, guid: fe5c148169001d9458a55cc5bac38067, type: 3}
       propertyPath: m_Name
       value: Concrete barrier End
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432150757856193460, guid: fe5c148169001d9458a55cc5bac38067, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7813636571455516942, guid: fe5c148169001d9458a55cc5bac38067, type: 3}
       propertyPath: m_RootOrder
@@ -2966,6 +3073,10 @@ PrefabInstance:
     - target: {fileID: 8592192679175653359, guid: 30e9535288fe2b74c9780bc60eed5731, type: 3}
       propertyPath: m_Name
       value: Long barrier (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8592192679175653359, guid: 30e9535288fe2b74c9780bc60eed5731, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8968436090302782805, guid: 30e9535288fe2b74c9780bc60eed5731, type: 3}
       propertyPath: m_RootOrder

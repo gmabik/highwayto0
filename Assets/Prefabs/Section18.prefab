@@ -1450,6 +1450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Speed breaker 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4404261845078400155, guid: 8dada62f6c40e7b4ab914ead532c812c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dada62f6c40e7b4ab914ead532c812c, type: 3}
 --- !u!4 &8264079430107354811 stripped
@@ -1605,16 +1609,28 @@ PrefabInstance:
       value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 3655016637753828244, guid: a8fc21b6efee5e842909ff1712db388c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.25752
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655016637753828244, guid: a8fc21b6efee5e842909ff1712db388c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.25752
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655016637753828244, guid: a8fc21b6efee5e842909ff1712db388c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.25752
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655016637753828244, guid: a8fc21b6efee5e842909ff1712db388c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.32440162
       objectReference: {fileID: 0}
     - target: {fileID: 3655016637753828244, guid: a8fc21b6efee5e842909ff1712db388c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.24999972
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3655016637753828244, guid: a8fc21b6efee5e842909ff1712db388c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.77
+      value: 9.7346
       objectReference: {fileID: 0}
     - target: {fileID: 3655016637753828244, guid: a8fc21b6efee5e842909ff1712db388c, type: 3}
       propertyPath: m_LocalRotation.w

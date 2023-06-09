@@ -110,6 +110,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &1487950990297285542
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3257085952985031556}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.71, z: 15.849998}
+  m_LocalPosition: {x: 0, y: 4.71, z: 16.82}
   m_LocalScale: {x: 30.824001, y: 0.28578526, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -413,7 +420,7 @@ GameObject:
   - component: {fileID: 7738232885938307916}
   - component: {fileID: 6403682566424805214}
   - component: {fileID: 4920117803817463284}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,7 +533,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3569013383698221692}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.9138999, z: 15.849998}
+  m_LocalPosition: {x: 0, y: 1.9138999, z: 16.82}
   m_LocalScale: {x: 30.824001, y: 3.503826, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -608,6 +615,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &3569013383817152363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1327,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &8059151015677325304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,6 +1444,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &8180810849394344773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,8 +1576,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9154406578862917313}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 11, z: 10}
-  m_LocalScale: {x: 5.506708, y: 22.588978, z: 6}
+  m_LocalPosition: {x: 0.1, y: 11, z: 10}
+  m_LocalScale: {x: 10.093741, y: 22.588978, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3569013383847455920}
@@ -1630,6 +1658,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1001 &387936618493332829
 PrefabInstance:
   m_ObjectHideFlags: 0

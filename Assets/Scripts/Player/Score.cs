@@ -1,20 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Score : MonoBehaviour
 {
     public float score;
-    PlayerMovement playerMov;
+    [SerializeField] private PlayerMovement playerMov;
+    [SerializeField] private MeleeWeapon weapon;
+    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text comboText;
 
-    private void Start()
+    void FixedUpdate()
     {
-        playerMov = gameObject.GetComponent<PlayerMovement>();
+        CountNewScore();
+
+        scoreText.text = Mathf.Round(score) + "";
+        comboText.text = weapon.killCount + "x";
     }
 
-    void Update()
+    private void CountNewScore()
     {
-        float newScore = gameObject.transform.position.z * 10;
+        float killScore = weapon.killCount * 1000;
+        float newScore = playerMov.transform.position.z * 10 + killScore;
         if (score < newScore) score = newScore;
         playerMov.walkSpeed = 10 + score / 10000;
         playerMov.crouchSpeed = 5 + score / 20000;

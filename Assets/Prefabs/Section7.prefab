@@ -110,6 +110,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &835288053440482168
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +227,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &1020762131706628060
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +344,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &1161463862543030888
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +461,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &1169858257158892407
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +578,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &1684879644945634294
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,6 +695,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &1810035644071173230
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,6 +812,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &1813682431856368473
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +929,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &1960682828709985714
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,6 +1046,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &2107806198267578774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,6 +1163,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &2240907287481677794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,6 +1377,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &3030975921850735043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1494,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &3194535938940470862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,6 +1611,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &3361754513506559447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1637,6 +1728,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &3522906804490734787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,6 +1845,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &3569013383817152363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,6 +1993,7 @@ Transform:
   - {fileID: 8317322524065445874}
   - {fileID: 3474056129755522516}
   - {fileID: 1685791463897294993}
+  - {fileID: 8595160248558982385}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2059,6 +2165,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &3971100099685856444
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,6 +2363,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &4058276829507020135
 GameObject:
   m_ObjectHideFlags: 0
@@ -2360,6 +2480,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &4157149901900468353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2470,6 +2597,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &4383231410406575253
 GameObject:
   m_ObjectHideFlags: 0
@@ -2580,6 +2714,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &4437018916419154843
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,6 +2831,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &4683592201013424922
 GameObject:
   m_ObjectHideFlags: 0
@@ -2800,6 +2948,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &4770484635170231424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2910,6 +3065,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &4821462692437192518
 GameObject:
   m_ObjectHideFlags: 0
@@ -3020,6 +3182,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &4828841340677776667
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,6 +3299,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &4929665295307450122
 GameObject:
   m_ObjectHideFlags: 0
@@ -3240,6 +3416,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &5321769089964901076
 GameObject:
   m_ObjectHideFlags: 0
@@ -3350,6 +3533,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &5447305250095179239
 GameObject:
   m_ObjectHideFlags: 0
@@ -3460,6 +3650,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &5693427030327216254
 GameObject:
   m_ObjectHideFlags: 0
@@ -3570,6 +3767,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &5829273379048697267
 GameObject:
   m_ObjectHideFlags: 0
@@ -3680,6 +3884,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &5871122379780118969
 GameObject:
   m_ObjectHideFlags: 0
@@ -3790,6 +4001,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &6371871081547330651
 GameObject:
   m_ObjectHideFlags: 0
@@ -3900,6 +4118,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &6406180190050043134
 GameObject:
   m_ObjectHideFlags: 0
@@ -4010,6 +4235,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &6427269694332837762
 GameObject:
   m_ObjectHideFlags: 0
@@ -4120,6 +4352,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &6765058450312159720
 GameObject:
   m_ObjectHideFlags: 0
@@ -4230,6 +4469,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &6774784315782154721
 GameObject:
   m_ObjectHideFlags: 0
@@ -4340,6 +4586,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc3eb1102ff0fd4f826d7a5fc58912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerDeath:
+    Guid:
+      Data1: 1579431082
+      Data2: 1251587939
+      Data3: 1408721544
+      Data4: -1496645189
+    Path: event:/PlayerDeath
 --- !u!1 &6956926790986574606
 GameObject:
   m_ObjectHideFlags: 0
@@ -4450,6 +4703,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &7313159367689301496
 GameObject:
   m_ObjectHideFlags: 0
@@ -4560,6 +4820,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &7487676832805583624
 GameObject:
   m_ObjectHideFlags: 0
@@ -4670,6 +4937,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &7535564249026902412
 GameObject:
   m_ObjectHideFlags: 0
@@ -4780,6 +5054,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &8086111997997728469
 GameObject:
   m_ObjectHideFlags: 0
@@ -4987,6 +5268,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &8247165407896832199
 GameObject:
   m_ObjectHideFlags: 0
@@ -5097,6 +5385,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &8315809051235761033
 GameObject:
   m_ObjectHideFlags: 0
@@ -5304,6 +5599,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &8669661038580177317
 GameObject:
   m_ObjectHideFlags: 0
@@ -5414,6 +5716,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &8682898073626153858
 GameObject:
   m_ObjectHideFlags: 0
@@ -5524,6 +5833,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &8829148985953515724
 GameObject:
   m_ObjectHideFlags: 0
@@ -5634,6 +5950,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &8886984235849320449
 GameObject:
   m_ObjectHideFlags: 0
@@ -5744,6 +6067,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &9014215045998063126
 GameObject:
   m_ObjectHideFlags: 0
@@ -5854,6 +6184,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &9059928813357437235
 GameObject:
   m_ObjectHideFlags: 0
@@ -5964,6 +6301,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1 &9173091178631482741
 GameObject:
   m_ObjectHideFlags: 0
@@ -6074,6 +6418,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a240de23569fa14fbe761471e57a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObstacleHit:
+    Guid:
+      Data1: 196494814
+      Data2: 1201404925
+      Data3: 1213664396
+      Data4: -2081977677
+    Path: event:/ObstacleHit
 --- !u!1001 &218266192570858574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6222,6 +6573,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2202075069157088577, guid: 50b1c83ea5e809b4ba5b8cbd5c80b48e, type: 3}
   m_PrefabInstance: {fileID: 714513216673281488}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1503178088781259783
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3569013383847455920}
+    m_Modifications:
+    - target: {fileID: 7175492275690548374, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: m_Name
+      value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175492275691041014, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175492275691041014, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175492275691041014, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175492275691041014, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175492275691041014, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175492275691041014, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175492275691041014, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175492275691041014, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175492275691041014, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175492275691041014, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175492275691041014, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31780836115f4d145b05c24757359db4, type: 3}
+--- !u!4 &8595160248558982385 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7175492275691041014, guid: 31780836115f4d145b05c24757359db4, type: 3}
+  m_PrefabInstance: {fileID: 1503178088781259783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2321995996696138342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6239,7 +6652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004551517727974804, guid: fc1007812c6ac3547bec6fd8fecb4c97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4699993
+      value: -1.16
       objectReference: {fileID: 0}
     - target: {fileID: 6004551517727974804, guid: fc1007812c6ac3547bec6fd8fecb4c97, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6375,7 +6788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004551517727974804, guid: fc1007812c6ac3547bec6fd8fecb4c97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -1.6900007
       objectReference: {fileID: 0}
     - target: {fileID: 6004551517727974804, guid: fc1007812c6ac3547bec6fd8fecb4c97, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6437,7 +6850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004551517727974804, guid: fc1007812c6ac3547bec6fd8fecb4c97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.47
+      value: -1.1600007
       objectReference: {fileID: 0}
     - target: {fileID: 6004551517727974804, guid: fc1007812c6ac3547bec6fd8fecb4c97, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6573,7 +6986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004551517727974804, guid: fc1007812c6ac3547bec6fd8fecb4c97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4699993
+      value: -1.16
       objectReference: {fileID: 0}
     - target: {fileID: 6004551517727974804, guid: fc1007812c6ac3547bec6fd8fecb4c97, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6635,7 +7048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004551517727974804, guid: fc1007812c6ac3547bec6fd8fecb4c97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4699998
+      value: -1.1600004
       objectReference: {fileID: 0}
     - target: {fileID: 6004551517727974804, guid: fc1007812c6ac3547bec6fd8fecb4c97, type: 3}
       propertyPath: m_LocalPosition.z

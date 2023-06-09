@@ -161,12 +161,14 @@ MonoBehaviour:
   - {fileID: 7833253421791937369}
   - {fileID: -6359930794414444688}
   - {fileID: 2138408513021773531}
+  - {fileID: 2503510018205223580}
+  - {fileID: 8120007513366114374}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2175568380002934120}
   StringsBanks:
   - {fileID: 2594047542055139724}
-  cacheTime: 638218366776539794
+  cacheTime: 638219372573529894
   cacheVersion: 131603
 --- !u!114 &1286758971828968800
 MonoBehaviour:
@@ -237,11 +239,38 @@ MonoBehaviour:
   Path: ../../FMOD Studio/audio system unity/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638218341671079824
+  lastModified: 638219372566822815
   FileSizes:
   - Name: Desktop
     Value: 1036
   Exists: 1
+--- !u!114 &2503510018205223580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AmbientREAPER
+  m_EditorClassIdentifier: 
+  Path: event:/AmbientREAPER
+  Guid:
+    Data1: -968473455
+    Data2: 1249892935
+    Data3: 1271749276
+    Data4: -12512164
+  Banks:
+  - {fileID: 7365433101318111085}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2594047542055139724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,10 +286,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/audio system unity/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638218341671179812
+  lastModified: 638219372566892863
   FileSizes:
   - Name: Desktop
-    Value: 1138
+    Value: 1224
   Exists: 1
 --- !u!114 &6021461663128272725
 MonoBehaviour:
@@ -304,10 +333,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/audio system unity/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638218366776539794
+  lastModified: 638219372573529894
   FileSizes:
   - Name: Desktop
-    Value: 1482624
+    Value: 2333792
   Exists: 1
 --- !u!114 &7833253421791937369
 MonoBehaviour:
@@ -336,3 +365,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8120007513366114374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AmbientRFinal
+  m_EditorClassIdentifier: 
+  Path: event:/AmbientRFinal
+  Guid:
+    Data1: -1060185957
+    Data2: 1085069313
+    Data3: -746389059
+    Data4: 145777422
+  Banks:
+  - {fileID: 7365433101318111085}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 59274

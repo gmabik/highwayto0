@@ -352,14 +352,56 @@ MonoBehaviour:
   m_GameObject: {fileID: 297864658}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa8cc4943cf11d4fbfaf364df9994ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orientation: {fileID: 0}
+  wallDistance: 0.5
+  minimumJumpHeight: 1.5
+  wallRunGravity: 0
+  wallRunJumpForce: 0
+  cam: {fileID: 0}
+  fov: 0
+  wallRunfov: 0
+  wallRunfovTime: 0
+  camTilt: 0
+  camTiltTime: 0
+--- !u!1 &919363391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 919363394}
+  - component: {fileID: 919363393}
+  - component: {fileID: 919363392}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &919363392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297864658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b645e47da7d732e45a90186be085f4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCam: {fileID: 1666575338}
+  mainCam: {fileID: 0}
   moveSpeed: 0
   walkSpeed: 20
   groundDrag: 0.4
-  jumpForce: 20
+  jumpForce: 1.8
+
   jumpCD: 0
   airMultiplayer: 0.5
   crouchSpeed: 15

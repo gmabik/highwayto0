@@ -9,6 +9,8 @@ public class MeleeWeapon : MonoBehaviour
 {
     private Animator animator;
     [SerializeField] private EventReference BatHit;
+    [SerializeField] private EventReference EnemyDeath;
+
     private void Start()
     {
         animator = gameObject.GetComponent<Animator>();
@@ -45,5 +47,7 @@ public class MeleeWeapon : MonoBehaviour
         collided.transform.DORotate(new Vector3(-90f, 0f, 0f), 0.5f);
         Destroy(collided, 5f);
         killCount++;
+        AudioManager.instance.PlayOneShot(EnemyDeath, this.transform.position);
+
     }
 }

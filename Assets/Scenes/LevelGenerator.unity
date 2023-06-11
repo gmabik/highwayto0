@@ -154,12 +154,7 @@ Transform:
   m_Father: {fileID: 297864659}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
 
->>>>>>> develop
 --- !u!1 &72804325 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1704956196094278, guid: 19156f3baa3e71f479bbf29aa6d08f72, type: 3}
@@ -217,19 +212,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BatHit:
     Guid:
-<<<<<<< HEAD
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-=======
       Data1: -1639467313
       Data2: 1312513905
       Data3: 440175780
       Data4: -1427175162
     Path: event:/BatUse
->>>>>>> develop
   EnemyDeath:
     Guid:
       Data1: -2063134705
@@ -254,10 +241,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 2
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> develop
 --- !u!1 &297864658
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,13 +345,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297864658}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
-<<<<<<< Updated upstream
---- !u!1 &919363391
-=======
-=======
 
->>>>>>> develop
 --- !u!114 &297864663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,20 +358,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa8cc4943cf11d4fbfaf364df9994ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  orientation: {fileID: 65609186}
-=======
   orientation: {fileID: 0}
->>>>>>> develop
   wallDistance: 0.5
   minimumJumpHeight: 1.5
   wallRunGravity: 0
   wallRunJumpForce: 0
-<<<<<<< HEAD
-  cam: {fileID: 1666575338}
-=======
   cam: {fileID: 0}
->>>>>>> develop
   fov: 0
   wallRunfov: 0
   wallRunfovTime: 0
@@ -417,10 +386,6 @@ Rigidbody:
   m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!1 &341770825
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> develop
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -792,42 +757,19 @@ MonoBehaviour:
   moveSpeed: 0
   walkSpeed: 15
   groundDrag: 0.4
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-  jumpForce: 1.8
-  jumpCooldown: 0
-=======
   jumpForce: 5
   jumpCD: 0
->>>>>>> develop
   airMultiplayer: 0.5
   crouchSpeed: 10
   crouchYScale: 0
   wallrunSpeed: 0
   desiredMovespeed: 0
-<<<<<<< HEAD
-=======
-  jumpForce: 20
-  jumpCD: 0
-  airMultiplayer: 0.5
-  crouchSpeed: 15
-  crouchYScale: 0
-  wallrunSpeed: 15
-  desiredMovespeed: 0
-  DashCD: 3
-  isDashOnCD: 0
-  DashMultiplier: 100
-  timeOfInvincible: 0.5
-  isInvincible: 0
->>>>>>> Stashed changes
-=======
   DashCD: 3
   isDashOnCD: 0
   DashMultiplier: 25
   timeOfInvincible: 0.5
   isInvincible: 0
 
->>>>>>> develop
   jumpKey: 32
   crouchKey: 306
   dashKey: 304
@@ -835,40 +777,17 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-  maxSlopeAngle: 80
-  orientation: {fileID: 65609186}
-=======
-=======
 
->>>>>>> develop
   grounded: 0
   maxSlopeAngle: 60
   orientation: {fileID: 297864659}
   JumpSound:
     Guid:
-<<<<<<< HEAD
-      Data1: -1769117630
-      Data2: 1135129708
-      Data3: -708708962
-      Data4: -253562222
-    Path: event:/Jump
-  DashSound:
-    Guid:
-      Data1: -1519545568
-      Data2: 1254955505
-      Data3: -1747169603
-      Data4: -632396109
-    Path: event:/DashSound
->>>>>>> Stashed changes
-=======
       Data1: 0
       Data2: 0
       Data3: 0
       Data4: 0
     Path: 
->>>>>>> develop
   state: 0
   wallrunning: 0
   angle: 0
@@ -1593,7 +1512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sections:
-  - {fileID: 7552546097672754954, guid: 3979b85e02d96f14592e240ac68a1de4, type: 3}
+  - {fileID: 791730946677320467, guid: 5bcbc381e40625d48b002aa21b572bde, type: 3}
   - {fileID: 7552546097672754954, guid: 320a1db49df07ca44b18f1efba350b52, type: 3}
   - {fileID: 4746995880636163974, guid: fdd746466ddb5be4cad159071eb9dafa, type: 3}
   - {fileID: 4604387444063754510, guid: 186d1f642fc0b8f46af3d8515816b596, type: 3}
@@ -1607,16 +1526,13 @@ MonoBehaviour:
   - {fileID: 3569013383847455919, guid: 0d030d1918424104eb3b7d8fd6351d68, type: 3}
   - {fileID: 3569013383847455919, guid: 0d11f5d89228ab1439760c972d126b3d, type: 3}
   - {fileID: 3569013383847455919, guid: 19ea67be1529f8e4ab2cd7e87771bcc6, type: 3}
-  - {fileID: 3569013383847455919, guid: ca45d39c739389447816fc70153d517c, type: 3}
+  - {fileID: 791730946677320467, guid: 39ab80bc20698cc4a874cb494a8bb10e, type: 3}
   - {fileID: 3569013383847455919, guid: d8e0a17e47c26cc47a56084075fd9ecd, type: 3}
   - {fileID: 3569013383847455919, guid: abb00f22a5b0e324db87004a303a609a, type: 3}
   - {fileID: 3569013383847455919, guid: 3e2d374817bf9cd41a31b713e9cb8feb, type: 3}
   - {fileID: 3569013383847455919, guid: a56bc35f15a26c44eb2b49586e65b3fe, type: 3}
   - {fileID: 3569013383847455919, guid: 788593ec7fb0f654891e290579b1b509, type: 3}
   - {fileID: 3569013383847455919, guid: bde9ed8c969695841a34e4080d420aef, type: 3}
-  - {fileID: 3569013383847455919, guid: 87cad1b7e68c94e4ba57f89441cdf3e8, type: 3}
-  - {fileID: 3569013383847455919, guid: 9f9b4d3151bc85a4f8512b5de88b20ba, type: 3}
-  - {fileID: 3569013383847455919, guid: df2835be320ab944d8d844cdcaa1d111, type: 3}
   spawnedSections: []
   StartSection: {fileID: 1337646788}
   zPos: 40

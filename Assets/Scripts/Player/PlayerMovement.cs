@@ -67,8 +67,11 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+<<<<<<< Updated upstream
     [SerializeField] private EventReference JumpSound;
 
+=======
+>>>>>>> Stashed changes
     public MovementState state;
     public enum MovementState
     {
@@ -176,6 +179,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+<<<<<<< Updated upstream
     private void DashManagement()
     {
         if (Input.GetKeyDown(dashKey) && !isDashOnCD) StartCoroutine(Dash());
@@ -199,6 +203,8 @@ public class PlayerMovement : MonoBehaviour
         isInvincible = false;
     }
 
+=======
+>>>>>>> Stashed changes
     private bool standUpInvokeStarted;
     private void TryStandUp()
     {

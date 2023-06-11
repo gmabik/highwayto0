@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   EditorBanks:
   - {fileID: 2594047542055139724}
   - {fileID: 2175568380002934120}
@@ -392,3 +393,12 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 59274
+=======
+  EditorBanks: []
+  EditorEvents: []
+  EditorParameters: []
+  MasterBanks: []
+  StringsBanks: []
+  cacheTime: 0
+  cacheVersion: 131603
+>>>>>>> Stashed changes

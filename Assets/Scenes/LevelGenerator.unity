@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0073026754, g: 0.0075019584, b: 0.016624408, a: 1}
+  m_IndirectSpecularColor: {r: 0.0073340284, g: 0.0074743913, b: 0.016651059, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -154,7 +154,6 @@ Transform:
   m_Father: {fileID: 297864659}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
 --- !u!1 &72804325 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1704956196094278, guid: 19156f3baa3e71f479bbf29aa6d08f72, type: 3}
@@ -212,11 +211,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BatHit:
     Guid:
-      Data1: -1639467313
-      Data2: 1312513905
-      Data3: 440175780
-      Data4: -1427175162
-    Path: event:/BatUse
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   EnemyDeath:
     Guid:
       Data1: -2063134705
@@ -345,7 +344,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297864658}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-
 --- !u!114 &297864663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,19 +755,18 @@ MonoBehaviour:
   moveSpeed: 0
   walkSpeed: 15
   groundDrag: 0.4
-  jumpForce: 5
+  jumpForce: 20
   jumpCD: 0
   airMultiplayer: 0.5
-  crouchSpeed: 10
+  crouchSpeed: 15
   crouchYScale: 0
   wallrunSpeed: 0
   desiredMovespeed: 0
   DashCD: 3
   isDashOnCD: 0
-  DashMultiplier: 25
+  DashMultiplier: 100
   timeOfInvincible: 0.5
   isInvincible: 0
-
   jumpKey: 32
   crouchKey: 306
   dashKey: 304
@@ -777,17 +774,23 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-
   grounded: 0
-  maxSlopeAngle: 60
-  orientation: {fileID: 297864659}
+  maxSlopeAngle: 0
+  orientation: {fileID: 65609186}
   JumpSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1769117630
+      Data2: 1135129708
+      Data3: -708708962
+      Data4: -253562222
+    Path: event:/Jump
+  DashSound:
+    Guid:
+      Data1: -1519545568
+      Data2: 1254955505
+      Data3: -1747169603
+      Data4: -632396109
+    Path: event:/DashSound
   state: 0
   wallrunning: 0
   angle: 0

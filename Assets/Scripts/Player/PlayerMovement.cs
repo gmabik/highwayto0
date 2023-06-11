@@ -69,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     [SerializeField] private EventReference JumpSound;
+    [SerializeField] private EventReference DashSound;
 
 
     public MovementState state;
@@ -200,6 +201,7 @@ public class PlayerMovement : MonoBehaviour
         isInvincible = true;
         yield return new WaitForSeconds(timeOfInvincible);
         isInvincible = false;
+        AudioManager.instance.PlayOneShot(DashSound, this.transform.position);
     }
 
 

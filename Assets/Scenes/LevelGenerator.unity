@@ -154,7 +154,7 @@ Transform:
   m_Father: {fileID: 297864659}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
+
 --- !u!1 &72804325 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1704956196094278, guid: 19156f3baa3e71f479bbf29aa6d08f72, type: 3}
@@ -241,8 +241,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 2
-=======
->>>>>>> Stashed changes
 --- !u!1 &297864658
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +345,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297864658}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< Updated upstream
+
 --- !u!114 &297864663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,9 +386,6 @@ Rigidbody:
   m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!1 &341770825
-=======
---- !u!1 &919363391
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -762,7 +757,6 @@ MonoBehaviour:
   moveSpeed: 0
   walkSpeed: 15
   groundDrag: 0.4
-<<<<<<< Updated upstream
   jumpForce: 5
   jumpCD: 0
   airMultiplayer: 0.5
@@ -775,15 +769,7 @@ MonoBehaviour:
   DashMultiplier: 25
   timeOfInvincible: 0.5
   isInvincible: 0
-=======
-  jumpForce: 1.8
-  jumpCooldown: 0
-  airMultiplayer: 0.5
-  crouchSpeed: 15
-  crouchYScale: 0.5
-  wallrunSpeed: 0
-  desiredMovespeed: 0
->>>>>>> Stashed changes
+
   jumpKey: 32
   crouchKey: 306
   dashKey: 304
@@ -791,7 +777,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-<<<<<<< Updated upstream
+
   grounded: 0
   maxSlopeAngle: 60
   orientation: {fileID: 297864659}
@@ -802,10 +788,6 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-=======
-  maxSlopeAngle: 80
-  orientation: {fileID: 65609186}
->>>>>>> Stashed changes
   state: 0
   wallrunning: 0
   angle: 0

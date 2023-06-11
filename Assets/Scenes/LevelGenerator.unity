@@ -755,7 +755,7 @@ MonoBehaviour:
   moveSpeed: 0
   walkSpeed: 20
   groundDrag: 0.4
-  jumpForce: 25
+  jumpForce: 5
   jumpCD: 0
   airMultiplayer: 0.5
   crouchSpeed: 15

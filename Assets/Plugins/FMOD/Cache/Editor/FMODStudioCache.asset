@@ -1,5 +1,140 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6833271221877950838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Jump
+  m_EditorClassIdentifier: 
+  Path: event:/Jump
+  Guid:
+    Data1: -1769117630
+    Data2: 1135129708
+    Data3: -708708962
+    Data4: -253562222
+  Banks:
+  - {fileID: 7365433101318111085}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6359930794414444688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient
+  Guid:
+    Data1: 755128538
+    Data2: 1214828652
+    Data3: -2037555315
+    Data4: 235421279
+  Banks:
+  - {fileID: 7365433101318111085}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4292043934369133488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EnemyDeath
+  m_EditorClassIdentifier: 
+  Path: event:/EnemyDeath
+  Guid:
+    Data1: -2063134705
+    Data2: 1139544569
+    Data3: -1417707356
+    Data4: 905809386
+  Banks:
+  - {fileID: 7365433101318111085}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2871346251557641132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Death
+  m_EditorClassIdentifier: 
+  Path: event:/Death
+  Guid:
+    Data1: -1077021353
+    Data2: 1215244578
+    Data3: -195573583
+    Data4: -1277835106
+  Banks:
+  - {fileID: 7365433101318111085}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1641781573999250249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PlayerDeath
+  m_EditorClassIdentifier: 
+  Path: event:/PlayerDeath
+  Guid:
+    Data1: 1579431082
+    Data2: 1251587939
+    Data3: 1408721544
+    Data4: -1496645189
+  Banks:
+  - {fileID: 7365433101318111085}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,14 +148,6 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
-  EditorBanks: []
-  EditorEvents: []
-  EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  cacheTime: 0
-  cacheVersion: 131603
-=======
   EditorBanks:
   - {fileID: 2594047542055139724}
   - {fileID: 2175568380002934120}
@@ -37,13 +164,12 @@ MonoBehaviour:
   - {fileID: 2138408513021773531}
   - {fileID: 2503510018205223580}
   - {fileID: 8120007513366114374}
-  - {fileID: 8079861159621190382}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2175568380002934120}
   StringsBanks:
   - {fileID: 2594047542055139724}
-  cacheTime: 638220995954864782
+  cacheTime: 638219372573529894
   cacheVersion: 131603
 --- !u!114 &1286758971828968800
 MonoBehaviour:
@@ -114,7 +240,7 @@ MonoBehaviour:
   Path: ../../FMOD Studio/audio system unity/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638220995943850087
+  lastModified: 638219372566822815
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -161,10 +287,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/audio system unity/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638220995943950136
+  lastModified: 638219372566892863
   FileSizes:
   - Name: Desktop
-    Value: 1274
+    Value: 1224
   Exists: 1
 --- !u!114 &6021461663128272725
 MonoBehaviour:
@@ -208,10 +334,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/audio system unity/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638220995954864782
+  lastModified: 638219372573529894
   FileSizes:
   - Name: Desktop
-    Value: 2337280
+    Value: 2333792
   Exists: 1
 --- !u!114 &7833253421791937369
 MonoBehaviour:
@@ -231,33 +357,6 @@ MonoBehaviour:
     Data2: 1312513905
     Data3: 440175780
     Data4: -1427175162
-  Banks:
-  - {fileID: 7365433101318111085}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &8079861159621190382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/DashSound
-  m_EditorClassIdentifier: 
-  Path: event:/DashSound
-  Guid:
-    Data1: -1519545568
-    Data2: 1254955505
-    Data3: -1747169603
-    Data4: -632396109
   Banks:
   - {fileID: 7365433101318111085}
   IsStream: 0
@@ -294,4 +393,12 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 59274
+=======
+  EditorBanks: []
+  EditorEvents: []
+  EditorParameters: []
+  MasterBanks: []
+  StringsBanks: []
+  cacheTime: 0
+  cacheVersion: 131603
 >>>>>>> Stashed changes

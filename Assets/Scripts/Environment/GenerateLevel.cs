@@ -26,8 +26,8 @@ public class GenerateLevel : MonoBehaviour
 
     private void Start()
     {
-        spawnedSections = new GameObject[3];
-        spawnedSections[2] = StartSection;
+        spawnedSections = new GameObject[5];
+        spawnedSections[spawnedSections.Length - 1] = StartSection;
     }
 
     public void GenerateSection()

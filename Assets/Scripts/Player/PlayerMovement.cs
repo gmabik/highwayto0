@@ -7,9 +7,12 @@ using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEditorInternal;
 using UnityEngine;
+using FMODUnity;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Camera mainCam;
+
     [Header("Movement")]
     public float moveSpeed;
     public float walkSpeed;
@@ -18,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jumping")]
     public float jumpForce;
-    public float jumpCooldown;
+    public float jumpCD;
     public float airMultiplayer;
     bool readyToJump;
 
@@ -31,15 +34,24 @@ public class PlayerMovement : MonoBehaviour
     public float wallrunSpeed;
     public float desiredMovespeed;
 
+    [Header("Dashing")]
+    public float DashCD;
+    public bool isDashOnCD;
+    public float DashMultiplier;
+
+    [Header("Invincibility")]
+    public float timeOfInvincible;
+    public bool isInvincible;
+
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
-    public KeyCode sprintKey = KeyCode.LeftShift;
     public KeyCode crouchKey = KeyCode.LeftControl;
+    public KeyCode dashKey = KeyCode.LeftShift;
 
     [Header("Ground Check")]
     public float playerHeight;
     public LayerMask whatIsGround;
-    bool grounded;
+    public bool grounded;
 
     [Header("Slope Handling")]
     public float maxSlopeAngle;
@@ -55,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
     [SerializeField] private EventReference JumpSound;
@@ -62,6 +75,12 @@ public class PlayerMovement : MonoBehaviour
 
 
 >>>>>>> Stashed changes
+=======
+
+    [SerializeField] private EventReference JumpSound;
+
+
+>>>>>>> develop
     public MovementState state;
     public enum MovementState
     {
@@ -85,17 +104,20 @@ public class PlayerMovement : MonoBehaviour
         rb.drag = groundDrag;
         state = MovementState.walking;
         moveSpeed = walkSpeed;
+
+        isDashOnCD = false;
     }
 
-
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.5f, whatIsGround);
+        grounded = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), playerHeight * 0.7f, whatIsGround);
+        if(OnSlope()) grounded = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), playerHeight * 0.8f + 0.5f, whatIsGround);
+
         MyInput();
         SpeedControl();
 
-        if(grounded && state == MovementState.air)
+        if (grounded && state == MovementState.air)
         {
             rb.drag = groundDrag;
             /*if (Input.GetKey(crouchKey))
@@ -111,15 +133,18 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.walking;
             moveSpeed = walkSpeed;
         }
-        else if(!grounded)
+        else if (!grounded)
         {
             rb.drag = 0;
             state = MovementState.air;
         }
-    }
-    private void FixedUpdate()
-    {
         MovePlayer();
+
+        if (OnSlope() && grounded)
+        {
+            rb.AddForce(slope.transform.TransformDirection(Vector3.forward) * 0.75f, ForceMode.Impulse);
+            Debug.DrawRay(transform.position, slope.transform.TransformDirection(Vector3.forward) * angle , Color.green);
+        }
     }
 
     private void MyInput()
@@ -127,24 +152,31 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-
         if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
 
             Jump();
 
-            Invoke(nameof(ResetJump), jumpCooldown);
+            Invoke(nameof(ResetJump), jumpCD);
+            AudioManager.instance.PlayOneShot(JumpSound, this.transform.position);
+
         }
 
+        DashManagement();
 
+        CrouchManagement();
+    }
+
+    private void CrouchManagement()
+    {
         if (Input.GetKeyDown(crouchKey))
         {
             transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y / 2, transform.localScale.z);
             rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
         }
 
-        if(Input.GetKey(crouchKey))
+        if (Input.GetKey(crouchKey))
         {
             state = MovementState.crouching;
             moveSpeed = crouchSpeed;
@@ -156,12 +188,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
     private void DashManagement()
     {
         if (Input.GetKeyDown(dashKey) && !isDashOnCD) StartCoroutine(Dash());
         
+=======
+
+    private void DashManagement()
+    {
+        if (Input.GetKeyDown(dashKey) && !isDashOnCD) StartCoroutine(Dash());
+>>>>>>> develop
     }
 
     private IEnumerator Dash()
@@ -173,7 +212,10 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(InvincibilityFrames());
         yield return new WaitForSeconds(DashCD);
         isDashOnCD = false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop
     }
 
     private IEnumerator InvincibilityFrames()
@@ -181,11 +223,17 @@ public class PlayerMovement : MonoBehaviour
         isInvincible = true;
         yield return new WaitForSeconds(timeOfInvincible);
         isInvincible = false;
+<<<<<<< HEAD
         AudioManager.instance.PlayOneShot(DashSound, this.transform.position);
 
     }
 
 >>>>>>> Stashed changes
+=======
+    }
+
+
+>>>>>>> develop
     private bool standUpInvokeStarted;
     private void TryStandUp()
     {
@@ -208,13 +256,13 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        if (OnSlope() && !exitingSlope)
+        /*if (OnSlope() && !exitingSlope)
         {
 
             rb.AddForce(GetSlopeMoveDirection() * moveSpeed * 20f, ForceMode.Force);
             rb.AddForce(Vector3.down * 80f, ForceMode.Force);
-        }
-        else if (grounded)
+        }*/
+        if (grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
         else if (!grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplayer, ForceMode.Force);
@@ -223,14 +271,14 @@ public class PlayerMovement : MonoBehaviour
     private void SpeedControl()
     {
         //slope speed limit
-        if (OnSlope() && !exitingSlope)
+        /*if (OnSlope() && !exitingSlope)
         {
             if (rb.velocity.magnitude > moveSpeed)
                 rb.velocity = rb.velocity.normalized * moveSpeed;
-        }
+        }*/
 
-        else
-        {
+        //else
+        //{
             Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
             if (flatVel.magnitude > moveSpeed)
@@ -238,12 +286,12 @@ public class PlayerMovement : MonoBehaviour
                 Vector3 limitedVel = flatVel.normalized * moveSpeed;
                 rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
             }
-        }
+        //}
     }
     private void Jump()
     {
         exitingSlope = true;
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        rb.velocity = Vector3.zero;
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
@@ -252,12 +300,14 @@ public class PlayerMovement : MonoBehaviour
         readyToJump = true;
         exitingSlope = false;
     }
-
+    [SerializeField]private float angle;
+    private GameObject slope;
     private bool OnSlope()
     {
-        if (Physics.Raycast(transform.position, Vector3.down, out slopeHit))
+        if (Physics.Raycast(transform.position, Vector3.down * playerHeight * 0.8f, out slopeHit))
         {
-            float angle = Vector3.Angle(Vector3.up, slopeHit.normal);
+            angle = Vector3.Angle(Vector3.up, slopeHit.normal);
+            slope = slopeHit.transform.gameObject;
             return angle < maxSlopeAngle && angle != 0;
         }
 
@@ -271,5 +321,10 @@ public class PlayerMovement : MonoBehaviour
     public void UpdateMoveSpeed()
     {
         if (state == MovementState.walking) moveSpeed = walkSpeed;
+    }
+
+    public void Die()
+    {
+        if (!isInvincible) Destroy(gameObject);
     }
 }

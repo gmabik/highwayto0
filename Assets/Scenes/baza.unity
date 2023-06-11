@@ -848,6 +848,7 @@ GameObject:
   - component: {fileID: 863773019}
   - component: {fileID: 863773021}
   - component: {fileID: 863773020}
+  - component: {fileID: 863773022}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -886,19 +887,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b645e47da7d732e45a90186be085f4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  walkSpeed: 10
+  mainCam: {fileID: 241389101}
+  moveSpeed: 10
+  walkSpeed: 20
   groundDrag: 4
-  jumpForce: 20
-  jumpCooldown: 0.25
+  jumpForce: 3
+  jumpCD: 0
   airMultiplayer: 0.4
   crouchSpeed: 5
   crouchYScale: 0.5
   wallrunSpeed: 0
   desiredMovespeed: 0
+  DashCD: 0
+  isDashOnCD: 0
+  DashMultiplier: 0
+  timeOfInvincible: 0
+  isInvincible: 0
   jumpKey: 32
-  sprintKey: 304
   crouchKey: 306
+  dashKey: 304
   playerHeight: 3
   whatIsGround:
     serializedVersion: 2
@@ -923,6 +930,29 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &863773022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863773018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa8cc4943cf11d4fbfaf364df9994ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orientation: {fileID: 863773019}
+  wallDistance: 2
+  minimumJumpHeight: 1.5
+  wallRunGravity: 1
+  wallRunJumpForce: 3
+  cam: {fileID: 241389101}
+  fov: 0
+  wallRunfov: 0
+  wallRunfovTime: 0
+  camTilt: 0
+  camTiltTime: 0
 --- !u!1 &1111360251
 GameObject:
   m_ObjectHideFlags: 0

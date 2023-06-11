@@ -6230,6 +6230,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3569013383847455920}
     m_Modifications:
+    - target: {fileID: 482685185964632126, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: EnemyShoot.Path
+      value: event:/EnemyShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 482685185964632126, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: EnemyShoot.Guid.Data1
+      value: 1750810629
+      objectReference: {fileID: 0}
+    - target: {fileID: 482685185964632126, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: EnemyShoot.Guid.Data2
+      value: 1097246282
+      objectReference: {fileID: 0}
+    - target: {fileID: 482685185964632126, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: EnemyShoot.Guid.Data3
+      value: -1634841212
+      objectReference: {fileID: 0}
+    - target: {fileID: 482685185964632126, guid: 31780836115f4d145b05c24757359db4, type: 3}
+      propertyPath: EnemyShoot.Guid.Data4
+      value: 2095226917
+      objectReference: {fileID: 0}
     - target: {fileID: 7175492275690548374, guid: 31780836115f4d145b05c24757359db4, type: 3}
       propertyPath: m_Name
       value: enemy

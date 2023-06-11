@@ -55,6 +55,13 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+<<<<<<< Updated upstream
+=======
+    [SerializeField] private EventReference JumpSound;
+    [SerializeField] private EventReference DashSound;
+
+
+>>>>>>> Stashed changes
     public MovementState state;
     public enum MovementState
     {
@@ -149,6 +156,36 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+<<<<<<< Updated upstream
+=======
+    private void DashManagement()
+    {
+        if (Input.GetKeyDown(dashKey) && !isDashOnCD) StartCoroutine(Dash());
+        
+    }
+
+    private IEnumerator Dash()
+    {
+        Vector3 direction = new Vector3(mainCam.transform.rotation.x, transform.rotation.y, 1);
+        rb.velocity = new Vector3(0, 0f, 0);
+        rb.AddForce(mainCam.transform.forward * DashMultiplier, ForceMode.Impulse);
+        isDashOnCD = true;
+        StartCoroutine(InvincibilityFrames());
+        yield return new WaitForSeconds(DashCD);
+        isDashOnCD = false;
+
+    }
+
+    private IEnumerator InvincibilityFrames()
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(timeOfInvincible);
+        isInvincible = false;
+        AudioManager.instance.PlayOneShot(DashSound, this.transform.position);
+
+    }
+
+>>>>>>> Stashed changes
     private bool standUpInvokeStarted;
     private void TryStandUp()
     {

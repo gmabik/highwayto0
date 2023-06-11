@@ -11,6 +11,15 @@ public class Score : MonoBehaviour
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private TMP_Text comboText;
 
+    private float starterWalkSpeed;
+    private float starterCrouchSpeed;
+
+    private void Start()
+    {
+        starterWalkSpeed = playerMov.walkSpeed;
+        starterCrouchSpeed = playerMov.crouchSpeed;
+    }
+
     void FixedUpdate()
     {
         CountNewScore();
@@ -24,8 +33,8 @@ public class Score : MonoBehaviour
         float killScore = weapon.killCount * 1000;
         float newScore = playerMov.transform.position.z * 10 + killScore;
         if (score < newScore) score = newScore;
-        playerMov.walkSpeed = 10 + score / 10000;
-        playerMov.crouchSpeed = 5 + score / 20000;
+        playerMov.walkSpeed = starterWalkSpeed + score / 10000;
+        playerMov.crouchSpeed = starterCrouchSpeed + score / 20000;
         playerMov.UpdateMoveSpeed();
     }
 }

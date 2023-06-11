@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground Check")]
     public float playerHeight;
     public LayerMask whatIsGround;
-    bool grounded;
+    public bool grounded;
 
     [Header("Slope Handling")]
     public float maxSlopeAngle;
@@ -96,15 +96,16 @@ public class PlayerMovement : MonoBehaviour
         isDashOnCD = false;
     }
 
-
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.5f, whatIsGround);
+        grounded = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), playerHeight * 0.7f, whatIsGround);
+        if(OnSlope()) grounded = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), playerHeight * 0.8f + 0.5f, whatIsGround);
+
         MyInput();
         SpeedControl();
 
-        if(grounded && state == MovementState.air)
+        if (grounded && state == MovementState.air)
         {
             rb.drag = groundDrag;
             /*if (Input.GetKey(crouchKey))
@@ -120,15 +121,18 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.walking;
             moveSpeed = walkSpeed;
         }
-        else if(!grounded)
+        else if (!grounded)
         {
             rb.drag = 0;
             state = MovementState.air;
         }
-    }
-    private void FixedUpdate()
-    {
         MovePlayer();
+
+        if (OnSlope() && grounded)
+        {
+            rb.AddForce(slope.transform.TransformDirection(Vector3.forward) * 0.75f, ForceMode.Impulse);
+            Debug.DrawRay(transform.position, slope.transform.TransformDirection(Vector3.forward) * angle , Color.green);
+        }
     }
 
     private void MyInput()
@@ -217,13 +221,13 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        if (OnSlope() && !exitingSlope)
+        /*if (OnSlope() && !exitingSlope)
         {
 
             rb.AddForce(GetSlopeMoveDirection() * moveSpeed * 20f, ForceMode.Force);
             rb.AddForce(Vector3.down * 80f, ForceMode.Force);
-        }
-        else if (grounded)
+        }*/
+        if (grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
         else if (!grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplayer, ForceMode.Force);
@@ -232,14 +236,14 @@ public class PlayerMovement : MonoBehaviour
     private void SpeedControl()
     {
         //slope speed limit
-        if (OnSlope() && !exitingSlope)
+        /*if (OnSlope() && !exitingSlope)
         {
             if (rb.velocity.magnitude > moveSpeed)
                 rb.velocity = rb.velocity.normalized * moveSpeed;
-        }
+        }*/
 
-        else
-        {
+        //else
+        //{
             Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
             if (flatVel.magnitude > moveSpeed)
@@ -247,12 +251,12 @@ public class PlayerMovement : MonoBehaviour
                 Vector3 limitedVel = flatVel.normalized * moveSpeed;
                 rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
             }
-        }
+        //}
     }
     private void Jump()
     {
         exitingSlope = true;
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        rb.velocity = Vector3.zero;
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
@@ -261,12 +265,14 @@ public class PlayerMovement : MonoBehaviour
         readyToJump = true;
         exitingSlope = false;
     }
-
+    [SerializeField]private float angle;
+    private GameObject slope;
     private bool OnSlope()
     {
-        if (Physics.Raycast(transform.position, Vector3.down, out slopeHit))
+        if (Physics.Raycast(transform.position, Vector3.down * playerHeight * 0.8f, out slopeHit))
         {
-            float angle = Vector3.Angle(Vector3.up, slopeHit.normal);
+            angle = Vector3.Angle(Vector3.up, slopeHit.normal);
+            slope = slopeHit.transform.gameObject;
             return angle < maxSlopeAngle && angle != 0;
         }
 

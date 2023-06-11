@@ -99,8 +99,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        grounded = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), playerHeight * 0.8f + 0.5f, whatIsGround);
-        
+        grounded = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), playerHeight * 0.7f, whatIsGround);
+        if(OnSlope()) grounded = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), playerHeight * 0.8f + 0.5f, whatIsGround);
+
         MyInput();
         SpeedControl();
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0073340284, g: 0.0074743913, b: 0.016651059, a: 1}
+  m_IndirectSpecularColor: {r: 0.0073026754, g: 0.0075019584, b: 0.016624408, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 297864660}
   - component: {fileID: 297864664}
   - component: {fileID: 297864663}
+  - component: {fileID: 919363392}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Player
@@ -277,7 +278,7 @@ Transform:
   - {fileID: 1666575335}
   - {fileID: 72804326}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &297864660
 CapsuleCollider:
@@ -350,7 +351,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297864658}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faa8cc4943cf11d4fbfaf364df9994ba, type: 3}
   m_Name: 
@@ -366,71 +367,6 @@ MonoBehaviour:
   wallRunfovTime: 0
   camTilt: 0
   camTiltTime: 0
---- !u!1 &919363391
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 919363394}
-  - component: {fileID: 919363393}
-  - component: {fileID: 919363392}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &919363392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 297864658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b645e47da7d732e45a90186be085f4c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCam: {fileID: 0}
-  moveSpeed: 0
-  walkSpeed: 20
-  groundDrag: 0.4
-  jumpForce: 1.8
-
-  jumpCD: 0
-  airMultiplayer: 0.5
-  crouchSpeed: 15
-  crouchYScale: 0.5
-  wallrunSpeed: 0
-  desiredMovespeed: 0
-  DashCD: 2
-  isDashOnCD: 0
-  DashMultiplier: 25
-  timeOfInvincible: 0.5
-  isInvincible: 0
-  jumpKey: 32
-  crouchKey: 306
-  dashKey: 304
-  playerHeight: 3
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
-  maxSlopeAngle: 80
-  orientation: {fileID: 65609186}
-  JumpSound:
-    Guid:
-      Data1: -1769117630
-      Data2: 1135129708
-      Data3: -708708962
-      Data4: -253562222
-    Path: event:/Jump
-  state: 0
-  wallrunning: 0
 --- !u!54 &297864664
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -535,7 +471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  playerMov: {fileID: 297864663}
+  playerMov: {fileID: 919363392}
   weapon: {fileID: 72804329}
   scoreText: {fileID: 439001318}
   comboText: {fileID: 971402744}
@@ -552,7 +488,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &439001316
 GameObject:
@@ -803,6 +739,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709953720}
   m_CullTransparentMesh: 1
+--- !u!114 &919363392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297864658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b645e47da7d732e45a90186be085f4c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCam: {fileID: 1666575338}
+  moveSpeed: 0
+  walkSpeed: 20
+  groundDrag: 0.4
+  jumpForce: 25
+  jumpCD: 0
+  airMultiplayer: 0.5
+  crouchSpeed: 15
+  crouchYScale: 0
+  wallrunSpeed: 0
+  desiredMovespeed: 0
+  DashCD: 3
+  isDashOnCD: 0
+  DashMultiplier: 25
+  timeOfInvincible: 0.5
+  isInvincible: 0
+  jumpKey: 32
+  crouchKey: 306
+  dashKey: 304
+  playerHeight: 3
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  grounded: 0
+  maxSlopeAngle: 60
+  orientation: {fileID: 297864659}
+  JumpSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  state: 0
+  wallrunning: 0
+  angle: 0
 --- !u!1 &971402742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,12 +1014,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088405752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09, y: -0.4, z: -50}
+  m_LocalPosition: {x: -0.09, y: -0.4, z: -80.4}
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1088405757
 MonoBehaviour:
@@ -1167,7 +1151,7 @@ RectTransform:
   - {fileID: 647464328}
   - {fileID: 1412564255}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1492,7 +1476,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1535978876
 GameObject:
@@ -1561,7 +1545,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1666575334
 GameObject:
@@ -3055,7 +3039,7 @@ Transform:
   - {fileID: 1469803050}
   - {fileID: 2089489508}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1980024750
 GameObject:
@@ -3423,7 +3407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8173485841064625940, guid: 35e7f785333350e4ab1b3485ef7362c1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8173485841064625940, guid: 35e7f785333350e4ab1b3485ef7362c1, type: 3}
       propertyPath: m_LocalPosition.x

@@ -8,7 +8,6 @@ using FMODUnity;
 public class MeleeWeapon : MonoBehaviour
 {
     private Animator animator;
-    [SerializeField] private EventReference BatHit;
     [SerializeField] private EventReference EnemyDeath;
 
     private void Start()
@@ -25,7 +24,6 @@ public class MeleeWeapon : MonoBehaviour
     {
         if (Input.GetMouseButton(0)) animator.SetBool("attacking", true);
         animator.SetBool("walking", isWalking());
-        AudioManager.instance.PlayOneShot(BatHit, this.transform.position);
 
     }
 
